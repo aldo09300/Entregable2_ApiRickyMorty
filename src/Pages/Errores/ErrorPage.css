@@ -1,0 +1,58 @@
+
+.error-page-container {
+    text-align: center;
+    padding: 40px 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh; 
+  }
+  
+  .error-code {
+    color: #ff003c;
+    font-size: 8rem; 
+    line-height: 1; 
+    margin: 0;
+    padding: 0;
+    text-shadow: 0 0 20px rgba(255, 0, 60, 0.8), 0 0 40px rgba(255, 0, 60, 0.4);
+    font-family: 'Bungee', cursive;
+  }
+  
+  .error-title {
+    color: #39FF14;
+    letter-spacing: 3px;
+    margin: 10px 0 0px 0; 
+    font-family: 'Bungee', cursive;
+    font-size: 1.5rem;
+  }  
+  
+  .error-image {
+    max-width: 450px; 
+    width: 100%; 
+    margin: 0 0 20px 0; 
+    padding: 0;
+  }
+  
+  .btn-return {
+    color: var(--acento-neon, #39FF14);
+    text-decoration: none;
+    padding: 12px 30px; 
+    border: 2px solid var(--acento-neon, #39FF14); 
+    border-radius: 8px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    box-shadow: 0 0 10px rgba(57, 255, 20, 0.2); 
+  }
+  
+  .btn-return:hover {
+    background-color: rgba(57, 255, 20, 0.1);
+    box-shadow: 0 0 20px rgba(57, 255, 20, 0.6), inset 0 0 10px rgba(57, 255, 20, 0.2);
+    transform: scale(1.05); 
+  }

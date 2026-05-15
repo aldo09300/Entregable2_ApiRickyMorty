@@ -1,0 +1,158 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Bungee', cursive;
+}
+
+#cotenedorFiltros {
+  padding: 40px 20px;
+  width: 100%;
+  max-width: 1600px; 
+  margin: 0 auto;
+  min-height: 80vh;
+
+  #filtrosHead {
+    margin-bottom: 30px;
+    text-align: left;
+    h4 {
+      color: var(--color-secundario, #00B0C8);
+      font-size: 1rem;
+      letter-spacing: 5px;
+      margin: 0 0 5px 0;
+    }
+    h1 {
+      color: var(--acento-neon, #39FF14); 
+      font-size: 3.5rem;
+      margin: 0;
+      text-shadow: 0 0 15px rgba(57, 255, 20, 0.6);
+    } 
+  }
+
+  #especiesBoton {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 40px;
+    justify-content: flex-start;
+    .boton {
+      background: transparent;
+      color: #a0a0a0;
+      border: 1px solid #333;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-family: 'Bungee', cursive;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .boton:hover {
+      border-color: #39FF14;
+      color: #39FF14;
+    }
+    .boton.active {
+      background-color: #39FF14;
+      color: #000;
+      border-color: #39FF14;
+      box-shadow: 0 0 15px rgba(57, 255, 20, 0.6);
+    }
+  }
+
+  #contenedorPortal {
+    background-color: rgba(13, 13, 13, 0.6);
+    border: 1px solid #333;
+    border-radius: 15px;
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: inset 0 0 30px rgba(0,0,0,0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .PortalIcono {
+      width: 80px;
+      height: 80px;
+      background: radial-gradient(circle, #39FF14 20%, #005500 80%);
+      border-radius: 50%;
+      margin-bottom: 25px;
+      box-shadow: 0 0 20px rgba(57, 255, 20, 0.3);
+    }
+    p {
+      color: #a0a0a0;
+      font-family: 'Bungee', cursive;
+      font-size: 1rem;
+      letter-spacing: 2px;
+      margin: 0;
+    }
+  }
+
+  /* Ajuste de la cuadrícula de personajes */
+  #personajes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: flex-start; 
+    gap: 30px; 
+    margin-top: 40px; 
+    padding-bottom: 40px;
+    width: 100%;
+  }
+}
+
+#personajes > * {
+  flex: 0 0 100%; 
+  max-width: 400px; 
+}
+
+@media (min-width: 768.1px) and (max-width: 1023px) {
+  #personajes > * {
+    flex: 0 0 calc(50% - 15px); 
+    max-width: calc(50% - 15px);
+  }
+}
+
+@media (min-width: 1023.1px) {
+  #personajes > * {
+    flex: 1 1 calc(25% - 23px); 
+    max-width: calc(25% - 23px);
+    min-width: 280px; 
+  }
+}
+
+#paginacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  button {
+    background-color: transparent;
+    color: var(--acento-neon, #39FF14);
+    border: 1px solid var(--acento-neon, #39FF14);
+    padding: 6px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+  }
+  button:hover:not(:disabled) {
+    background-color: rgba(57, 255, 20, 0.1);
+    box-shadow: 0 0 8px rgba(57, 255, 20, 0.5);
+  }
+  button:disabled {
+    color: #444;
+    border-color: #333;
+    cursor: not-allowed;
+    background-color: transparent;
+  }
+  span {
+    color: var(--acento-neon, #39FF14);
+    font-family: 'Bungee', cursive;
+    font-size: 1.2rem;
+    text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+  }
+}

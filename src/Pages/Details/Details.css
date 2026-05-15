@@ -1,0 +1,163 @@
+#contenedorDetalles {
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+  .volver {
+    background: transparent;
+    color:  #00B0C8;
+    border: 1px solid  #00B0C8;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-family: inherit;
+    transition: 0.3s;
+  }
+  .volver:hover {
+    box-shadow: 0 0 8px rgba(0, 176, 200, 0.8), 0 0 20px rgba(0, 176, 200, 0.4);
+    background: rgba(0, 176, 200, 0.1);
+  }
+}
+  
+  #detalles {
+    display: flex;
+    background-color: #1A1A1A;
+    border: 2px solid  #00B0C8;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0, 176, 200, 0.2);
+    flex-wrap: wrap; 
+  }
+  
+  #imagenPersonaje {
+    flex: 1;
+    min-width: 300px;
+    border-right: 2px solid  #00B0C8;
+    position: relative;
+  }
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .status-bar {
+    position: absolute;
+    color: #E0E0E0 ;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-top: 1px solid  #00B0C8;
+  }
+  
+  .status-bar .alive { color: #39FF14; text-shadow: 0 0 8px rgba(57, 255, 20, 0.8), 0 0 20px rgba(57, 255, 20, 0.4); }
+  .status-bar .dead { color: #ff003c; text-shadow: 0 0 10px #ff003c; }
+  
+  #detallesInformacion{
+    flex: 1.5;
+    padding: 40px;
+    min-width: 300px;
+    h2{
+      color:  #39FF14;
+      font-size: 3rem;
+      margin: 0 0 30px 0;
+      text-transform: uppercase;
+      text-shadow: 0 0 8px rgba(57, 255, 20, 0.8), 0 0 20px rgba(57, 255, 20, 0.4);
+    }
+    #contenedorInformacion{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+      .info {
+        border-bottom: 1px solid #333;
+        padding-bottom: 10px;
+        .infoNombre {
+          display: block;
+          color:  #00B0C8;
+          font-size: 0.8rem;
+          letter-spacing: 2px;
+          margin-bottom: 5px;
+        }
+        .infoValor {
+          color:  #E0E0E0;
+          font-size: 1.2rem;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  
+@media (max-width: 768px) { 
+
+  #detalles {
+    display: flex; 
+    flex-direction: column; 
+    border: none; 
+    box-shadow: none; 
+    border: 2px solid #00B0C8;
+    max-width: 450px; 
+    margin: 0 auto; 
+    background-color: transparent; 
+    box-shadow: 0 0 30px rgba(0, 176, 200, 0.2);
+  }
+
+  #imagenPersonaje {
+    width: 100%; 
+    flex: 0 0 auto; 
+    border-right: none; 
+    border-bottom: 2px solid #00B0C8;
+    padding: 0; 
+
+    img {
+      max-height: 350px; 
+      object-fit: cover; 
+    }
+    .status-bar {
+      border-top: none; 
+    }
+  }
+
+  #detallesInformacion {
+    width: 100%; 
+    flex: 0 0 auto; 
+    padding: 30px; 
+    
+    
+    h2{
+      text-align: center; 
+      font-size: 2.2rem; 
+    }
+
+    #contenedorInformacion{
+      display: flex; 
+      flex-direction: column; 
+      justify-content: center;
+      gap: 15px; 
+    
+      .info{
+        border-bottom: 1px solid #333; 
+        padding-bottom: 8px; 
+
+        .infoNombre {
+          text-align: center; 
+          justify-content: center;
+        }
+
+        .infoValor {
+          display: block;
+          text-align: center; 
+          justify-content: center;
+          font-size: 1.1rem; 
+        }
+      }
+    }
+  }
+
+}
+
