@@ -1,9 +1,5 @@
 # 🛸 Rick and Morty: Interdimensional Portal Terminal
 
-![Version](https://img.shields.io/badge/Version-1.0.0-brightgreen)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![SCSS](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
-
 Este proyecto es una plataforma interactiva que consume la **API de Rick and Morty**, permitiendo a los usuarios escanear el multiverso en busca de personajes, visualizar detalles específicos y filtrar especímenes por especie.
 
 ---
@@ -55,7 +51,7 @@ Si deseas clonar esta dimensión en tu entorno local, sigue estos pasos:
 
 ## 🛸 Créditos
 
-* **Desarrollador:** [Tu Nombre] - Especialista en Sistemas e Ingeniería Interdimensional.
+* **Desarrollador:** Aldo Stiven Encarnacion Valderrama.
 * **API:** [Rick and Morty API](https://rickandmortyapi.com/)
 * **Estilo:** Neón/Cyberpunk inspirado en la Ciudadela de Ricks.
 
