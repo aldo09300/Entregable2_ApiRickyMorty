@@ -12,18 +12,20 @@ main{
       padding: 40px 20px;
       gap: 50px;
       #descripcion {
-        color: #E0E0E0;
         max-width: 800px;
         text-align: center;
         background-color:  #1A1A1A;
         padding: 25px 40px;
         border-radius: 12px;
         border: 1px solid #333;
-        color: var #E0E0E0;
+        color:  #E0E0E0;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+        font-family: 'Courier New', Courier, monospace;
         font-size: 1.15rem;
         line-height: 1.7;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
-        font-family: 'Courier New', Courier, monospace; 
+        p{
+          color: #E0E0E0;
+        }
       }
       img {
         width: 100%;
