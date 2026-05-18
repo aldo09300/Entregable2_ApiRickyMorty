@@ -13,10 +13,16 @@ export default function Details() {
       setLoading(true);
       try {
         const response = await fetch(`https://rickandmortyapi.com/api/character/${id}`);
+        
+        if (response.status === 404) {
+          navigate('/404', { replace: true });
+          return;
+        }
+
         const data = await response.json();
         setCharacter(data);
       } catch (error) {
-        console.error("Error en el escaneo:", error);
+        console.error(error);
       } finally {
         setLoading(false);
       }
@@ -24,7 +30,7 @@ export default function Details() {
 
     fetchCharacterDetail();
     window.scrollTo(0, 0);
-  }, [id]);
+  }, [id, navigate]);
 
   if (loading) {
     return (
@@ -46,7 +52,7 @@ export default function Details() {
         <div id="imagenPersonaje">
           <img src={character.image} alt={character.name} />
           <div className="status-bar">
-            ESTADO: <span className={character.status.toLowerCase()}>{character.status}</span>
+            ESTADO: <span className={character?.status?.toLowerCase() || 'unknown'}>{character.status}</span>
           </div>
         </div>
 
